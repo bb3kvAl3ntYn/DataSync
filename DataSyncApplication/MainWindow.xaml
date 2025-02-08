@@ -1,0 +1,43 @@
+﻿<Window x:Class="DataSyncApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Data Sync Application" Height="600" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="200"/>
+        </Grid.RowDefinitions>
+
+        <!-- Control Panel -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="Sync Interval (seconds):" VerticalAlignment="Center"/>
+            <TextBox x:Name="txtInterval" Width="60" Margin="10,0"/>
+            <Button x:Name="btnSetInterval" Content="Set Interval" Margin="0,0,10,0" Click="btnSetInterval_Click"/>
+            <Button x:Name="btnManualSync" Content="Manual Sync" Click="btnManualSync_Click"/>
+        </StackPanel>
+
+        <!-- Data Grid -->
+        <DataGrid Grid.Row="1" x:Name="dgCustomers" AutoGenerateColumns="False" Margin="0,0,0,10">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding CustomerID}"/>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="Email" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Phone" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="Locations" Binding="{Binding Locations}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Log Panel -->
+        <TabControl Grid.Row="2">
+            <TabItem Header="Sync Log">
+                <TextBox x:Name="txtLog" IsReadOnly="True" TextWrapping="Wrap" 
+                         VerticalScrollBarVisibility="Auto"/>
+            </TabItem>
+            <TabItem Header="API Response">
+                <TextBox x:Name="txtApiResponse" IsReadOnly="True" TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Auto"/>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

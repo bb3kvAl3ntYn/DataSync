@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35514.174 d17.12
+VisualStudioVersion = 17.12.35514.174
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSyncApplication", "DataSyncApplication\DataSyncApplication.csproj", "{962E8298-7202-4572-9AC0-607623D18F66}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSync.Application", "Application\DataSync.Application.csproj", "{BE2FD78F-8C9F-46C7-8C3E-9F94EDB4710A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{C35E6630-9754-4C63-8AB9-5039046C567D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSyncAPI", "DataSyncAPI\DataSyncAPI.csproj", "{FB62B448-C0B5-4130-A712-DA19396BB1B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{C35E6630-9754-4C63-8AB9-5039046C567D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C35E6630-9754-4C63-8AB9-5039046C567D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C35E6630-9754-4C63-8AB9-5039046C567D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB62B448-C0B5-4130-A712-DA19396BB1B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB62B448-C0B5-4130-A712-DA19396BB1B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB62B448-C0B5-4130-A712-DA19396BB1B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB62B448-C0B5-4130-A712-DA19396BB1B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

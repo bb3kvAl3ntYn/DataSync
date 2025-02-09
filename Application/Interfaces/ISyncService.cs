@@ -7,5 +7,6 @@ namespace DataSync.Application.Interfaces
     {
         Task SyncDataAsync();
         Task<List<CustomerDto>> GetCustomerData();
+        Task<List<LocationDto>> GetCustomerLocationsAsync(int customerId);
     }
 }

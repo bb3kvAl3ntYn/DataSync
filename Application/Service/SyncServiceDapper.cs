@@ -209,6 +209,20 @@ namespace DataSync.Application.Service
 
             return customerDtos.ToList();
         }
+        public async Task<List<LocationDto>> GetCustomerLocationsAsync(int customerId)
+        {
+            var query = @"
+                        SELECT 
+                            l.LocationID, 
+                            l.Address
+                        FROM Locations l
+                        WHERE l.CustomerID = @CustomerID;";
+
+            var locationDtos = await _targetDbConnection.QueryAsync<LocationDto>(
+                query, new { CustomerID = customerId });
+
+            return locationDtos.ToList();
+        }
     }
 
 }

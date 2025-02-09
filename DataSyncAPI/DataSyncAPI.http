@@ -1,0 +1,6 @@
+@DataSyncAPI_HostAddress = http://localhost:5155
+
+GET {{DataSyncAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
